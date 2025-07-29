@@ -113,3 +113,7 @@ product-model .shopify-model-viewer-ui model-viewer {
 .shopify-model-viewer-ui__button[hidden] {
   display: none;
 }
+
+.caption-with-letter-spacing {
+  text-transform: uppercase;
+}

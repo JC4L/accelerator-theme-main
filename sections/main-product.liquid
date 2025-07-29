@@ -59,7 +59,10 @@
           {%- when '@app' -%}
             {% render block %}
           {%- when 'text' -%}
-            <p {{ block.shopify_attributes }}>
+            <p
+              class="product__text inline-richtext caption-with-letter-spacing"
+              {{ block.shopify_attributes }}
+            >
               {{ block.settings.text }}
             </p>
           {%- when 'title' -%}
@@ -207,7 +210,6 @@
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
                     </span>
-
                   </button>
 
                   {% comment %} Dynamic checkout buttons {% endcomment %}
@@ -216,7 +218,7 @@
                   {% endif %}
                   {% comment %} Gift card recipient form {% endcomment %}
                   {% if block.settings.show_gift_card_recipient and product.gift_card? %}
-                    {% render "gift-card-recipient-form" %}
+                    {% render 'gift-card-recipient-form' %}
                   {% endif %}
                 </div>
               {%- endform -%}
@@ -398,7 +400,7 @@
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
         }
-        ]
+      ]
     },
     {
       "type": "description",
