@@ -229,6 +229,20 @@
                 {{ product.description }}
               </div>
             {%- endunless -%}
+          {%- when 'model_info' -%}
+            <div {{ block.shopify_attributes }}>
+              <p>
+                {{ product.metafields.models.model_info.value.name.value }} is
+                {{ product.metafields.models.model_info.value.height | metafield_tag }} and wearing size
+                {{ product.metafields.model.wearing_size.value }}.
+              </p>
+              <p>{{ product.metafields.models.model_info.value.name.value }}'s measurements:</p>
+              <ul>
+                <li>Bust: {{ product.metafields.models.model_info.value.bust | metafield_tag }}</li>
+                <li>Waist: {{ product.metafields.models.model_info.value.waist | metafield_tag }}</li>
+                <li>Hips: {{ product.metafields.models.model_info.value.hips | metafield_tag }}</li>
+              </ul>
+            </div>
           {%- when 'rating' -%}
             {%- unless product.metafields.reviews.rating.value == blank -%}
               <p class="rating">
@@ -405,6 +419,11 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "model_info",
+      "name": "t:sections.main-product.blocks.model_info.name",
       "limit": 1
     },
     {

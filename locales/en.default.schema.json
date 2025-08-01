@@ -111,6 +111,9 @@
         "description": {
           "name": "Description"
         },
+        "model_info": {
+          "name": "Model Information"
+        },
         "rating": {
           "name": "Product rating",
           "settings": {
@@ -219,6 +222,9 @@
       "presets": {
         "name": "Rich text"
       }
+    },
+    "model_info": {
+          "name": "Model Information"
     },
     "main-article": {
       "name": "Blog post",

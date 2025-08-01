@@ -33,6 +33,12 @@
         },
         "description": {
           "type": "description"
+        },
+        "model_info": {
+          "type": "model_info",
+          "settings": {
+
+          }
         }
       },
       "block_order": [
@@ -43,7 +49,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "model_info"
       ],
       "settings": {
       }

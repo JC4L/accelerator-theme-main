@@ -8,6 +8,9 @@
         }
       }
     },
+    "model_info": {
+          "name": "Información del modelo"
+    },  
     "apps": {
       "name": "Aplicaciones",
       "presets": {
@@ -157,6 +160,9 @@
     "main-product": {
       "name": "Información de producto",
       "blocks": {
+        "model_info": {
+          "name": "Información del modelo"
+        },
         "text": {
           "name": "texto",
           "settings": {
